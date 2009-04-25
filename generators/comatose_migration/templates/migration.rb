@@ -10,7 +10,7 @@ class <%= class_name %> < ActiveRecord::Migration
   def self.up
     create_table :comatose_pages do |t|
       t.integer   "parent_id"
-      t.text      "full_path",   :default => ''
+      t.text      "full_path",   :null => false, :default => ''
       t.string    "title",       :limit => 255
       t.string    "slug",        :limit => 255
       t.string    "keywords",    :limit => 255
